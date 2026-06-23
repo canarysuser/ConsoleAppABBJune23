@@ -301,6 +301,43 @@ Arguments to functions
 			-> allows to alter the argument passing sequence 
 			
 
+Object Oriented Concepts 
+Object 	-> real world entity, physical or logical entity 
+	-> smallest unit of representation(memory) 
+	-> instance of a class 
+	-> 3 characteristics -> Identity (name), State(data), Behaviors(functions/methods) 
+Class	-> classification of objects which have similar characteristics 
+	-> abstraction or abstract definition is called as class 
+	-> blueprint of an object , template using which an object is created 
+Structured Programming 
+	- focuses on the sequence of instructions, rather than the data 
+OO Programming 
+	- focuses on data, functionalities revolve around data manipulation 
+
+Design Patterns and Design Principles 
+-> Patterns are common solution to recurring problems, 23+ patterns [ GoF - Gang of Four ]
+-> Principles are design requirements to ease application maintenance, 5 Principles [ SOLID ]
+
+Class in C# 
+- can contain fields, methods, properties, indexers, events, constructors, destructors 
+- is a ref type and inherits from System.Object 
+- all class fields are initialized to their default values 
+- can define parameterized or parameterless constructors or initializers 
+- default parameterless constructor is provided by the runtime 
+- can be inherited by other classes unless explicitly forbidden/prevented 
+- class can inherit from one base at most, multiple inheritance is not supported 
+- classes can implement multiple interfaces 
+- all class members are private  by default. 
+
+Constructors 
+- are the first method to be invoked on the object, usually done by the CLR 
+- used to initialize the newly created object 
+- default parameterless constructor provided by the compiler 
+- parameterized constructors can eb defined in code 
+- can be overloaded - multiple constructors defined with differing arguments 
+- can be chained into a constructor list - one ctor calling another ctor 
+
+
 
 
 
