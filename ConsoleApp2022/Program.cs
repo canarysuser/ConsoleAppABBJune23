@@ -41,7 +41,7 @@ namespace ConsoleApp2022
             Console.WriteLine($"{a} + {b} = {(c==30?"Thirty" : "Not Thirty")}");
 */
 
-            string name = string.Empty;
+            /*string name = string.Empty;
             Console.Write("Enter Name: ");
             name = Console.ReadLine(); //getting the input from user
             Console.WriteLine($"Hello {name}. Welcome to C# Programming!!");
@@ -84,7 +84,9 @@ namespace ConsoleApp2022
                 Console.Write($"{counter},\t");
             }
             Console.WriteLine("\n\nPress a key to terminate....");
-            Console.ReadKey();
+            Console.ReadKey();*/
+
+            Arrays.Test();
         }
     }
 }
