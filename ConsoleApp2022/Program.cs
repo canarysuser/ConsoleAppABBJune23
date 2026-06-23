@@ -87,7 +87,10 @@ namespace ConsoleApp2022
             Console.ReadKey();*/
 
             //Arrays.Test();
-            Methods.Test();
+            //Methods.Test();
+            Employee e1 = new Employee();
+            e1.Show();
+            
         }
     }
 }
