@@ -8,7 +8,7 @@ namespace ConsoleApp2022
 {
     internal class Arrays
     {
-        internal static void Test()
+        public static void Test()
         {
             int[] arr = new int[100];
             for (int i = 0; i < arr.Length; i++)

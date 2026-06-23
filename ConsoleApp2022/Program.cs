@@ -86,7 +86,8 @@ namespace ConsoleApp2022
             Console.WriteLine("\n\nPress a key to terminate....");
             Console.ReadKey();*/
 
-            Arrays.Test();
+            //Arrays.Test();
+            Methods.Test();
         }
     }
 }
