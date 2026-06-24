@@ -407,10 +407,33 @@ Sealed keyword on
 class - prevent inheritance of the class 
 method - prevents further overriding of the method 
 
+Abstract 
+class 
+	- full fledged class that contains fields, methods, properties, constructors, destructors,
+	- it also contains zero or more unimplemented methods - signature is declared 
+	- the unimplemented methods have to be implemented using derived classes 
+	- forcing inheritance to use the abstract class 
+	- cannot be instantiated directly 
 
+SOLID - 
+S	SRP -> Single Responsibility Principle - each class should have one responsibility
+O	OCP -> Open/Close Principle - a class should be closed for modification, open for extension
+L	LSP -> Liskov Substitution P - replace derived references with base references with breaking
+I	ISP -> Interface Segregation P - create smaller interfaces rather than one massive interface
+D	DIP -> Dependency Inversion P - Depend on abstraction rather than concrete implementations
 
+methods 
+	- are unimplemented methods - with only the declaration provided 
+	- pure virtual methods 
+	- derived class should use the override keyword to implement the abstract method 
+	- are implicitly virtual 
+	- cannot be declared as static, sealed or private 
 
-
+Account class with Deposit, WIthdraw functionalities 
+2 types of accounts - Savings and Current 
+Business Rules for Withdraw 
+	Savings - Minimum balance should be 5000 
+	Current - Minimum balance should be 10000 
 
 
 

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractImpementation.cs" />
     <Compile Include="Arrays.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Inheritance.cs" />
