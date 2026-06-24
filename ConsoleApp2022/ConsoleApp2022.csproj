@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AbstractImpementation.cs" />
     <Compile Include="Arrays.cs" />
+    <Compile Include="DelegateSample.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="ExceptionHandling.cs" />
     <Compile Include="Inheritance.cs" />

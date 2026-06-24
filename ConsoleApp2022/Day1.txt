@@ -548,6 +548,49 @@ Exception
 	- always executed to denote the end of the try..catch sequence 
 
 
+Delegates and Events 
+-- Function Pointers - Delegates are type-safe function pointers 
+-- Function POinters provide extensibility endpoint to the application 
+
+void Sort(int[] arr, **fnPtr() ) { 
+	RemoveNulls();
+	Deduplicate(); 
+	CleanTheArray(); 
+	fnPtr(); 
+	Validate(); 
+	ReturnTheArray;
+}
+- Function pOinters invoke functions which matches its own signature 
+- Defer the execution of functions using Delegate 
+- Delegates are first class objects and can be passed across functions 
+- Delegate stores the address of the target function which matches its own signature 
+- System.Delegate is the type in .NET representing the function pointer 
+- CLR writes the Delegate code for us 
+- System.MulticastDelegate inherits from System.Delegate and provides a list of Delegate(function 	pointers)
+- In a single invocation, multiple functions can get executed 
+- 3 Steps to work with Delegates
+Step 1 : Declaration -> declare a delegate 
+Step 2 : Instantiation 
+Step 3 : Invocation 
+
+Step 1: Declaration 
+- delegate is declared like a function 
+[visibility] delegate <returnType> <DelegateName>([<arg_list>]); 
+-> Compiler converts this declaration into a class declaration 
+-> For Ex: public delegate void MyDelegate(); 
+
+Step 2: Instantiation 
+- pass the address of the target function 
+	void Show() { } 
+	MyDelegate md = new MyDelegate(Show); //Show
+
+Step 3: INvocation 
+- can be invoked like a function 
+For ex: md(); 
+- can be invoked like a object member 
+For Ex: md.Invoke(); 
+
+ 
 
 
 
