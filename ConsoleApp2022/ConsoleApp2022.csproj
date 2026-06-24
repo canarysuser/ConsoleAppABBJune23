@@ -50,6 +50,7 @@
     <Compile Include="ExceptionHandling.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="Interfaces.cs" />
+    <Compile Include="MemoryManagement.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Namespaces.cs" />
     <Compile Include="Program.cs" />

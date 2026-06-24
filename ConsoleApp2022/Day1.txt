@@ -590,10 +590,40 @@ For ex: md();
 - can be invoked like a object member 
 For Ex: md.Invoke(); 
 
- 
+
+Memory Management 
+- is done using GarbageCollector GC. 
+- GC is responsible for allocating and deallocation memory for objects 
+- GC manages the heap locations 
+	-> CLR 2 kinds of heaps 
+		- Standard Heap - objects created 
+		- LOB Heap - Large objects >64K and arrays are created 
+- GC employs Mark and Sweep logic - Collection and Compaction of heap 
+- GC manages objects by generations 
+	- Gen 0: short-lived objects, recently created - L2 cache 
+	- Gen 1: long-lived objects, survived one collection attempt, RAM sized to Gen 0
+		 - when Gen 0 is full - memory pressure and no space to create new objects 
+			-> Marks all referenced objects, moves it to Gen 1, sweeps the entire Gen0
+			-> new objects are created here.
+	- Gen 2: very long-lived objects, survived multiple collection attempts, sized to RAM 
+		- When Gen 1 is full - memory pressure and no space to move objects from Gen 0 to Gen1 
+			- Marks all referenced object in Gen1, moves it to Gen2, sweeps entire Gen1 
+			- Marks all referenced objects in Gen0, moves to Gen1, sweeps entire Gen0 
+			- Creates new objects in Gen0. 
+	- Gen 2 is filled - memory pressure in Gen2 
+		- Marks all referenced objects, moves them to the beginning of the heap, 
+		- creates freespace towards the end of heap, 
+		- Gen1 is cleaned up, Gen0 is cleaned up and new objects will be created in Gen0 
+
+- When there is memory pressure - no space to create new objects - in Gen0 
+- When it is called explicitly using GC.Collect(); 
+- When the program terminates, GC cleans up the entire occupied heap. 
 
 
-
+Destructors 
+- last method (finalizers) that run on the objects 
+- invoked by the CLR/GC, user cannot invoke the destructor 
+- 
 
 
 

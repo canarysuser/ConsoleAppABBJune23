@@ -112,7 +112,8 @@ namespace ConsoleApp2022
             //StaticExample.Test();
             //ExceptionHandling.Test();
             //AbstractImpementation.Test();
-            DelegateSample.Test();
+            //DelegateSample.Test();
+            MemoryManagement.Test();
         }
     }
 }
