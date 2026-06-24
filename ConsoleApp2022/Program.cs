@@ -90,7 +90,11 @@ namespace ConsoleApp2022
             //Methods.Test();
             Employee e1 = new Employee();
             e1.Show();
-            
+            e1.Id = 9999;
+            e1.Name = "Microsoft";
+            e1.City = "Chennai";
+            e1.Salary = 9876.54;
+            e1.Show();
         }
     }
 }

@@ -15,6 +15,34 @@ namespace ConsoleApp2022
         private double _salary;
         #endregion
 
+        #region Properties 
+        public int Id
+        {
+            get { return _id;  }
+            set { _id = value; }
+        }
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public string City
+        {
+            get { return _city; }
+            set { _city = value; }
+        }
+        public double Salary
+        {
+            get { return _salary; }
+            set { _salary = value; }
+        }
+        //Compiler shortcut - compiler generates a backing field and completes the code 
+        public string Address { get; set; }
+        //Used in training sessions/learning 
+
+
+        #endregion
+
         #region Constructors or Initializers 
         //First methods that is invoked on the object, immediately after creating the object 
         public Employee() : this(9999, "DEFAULT")

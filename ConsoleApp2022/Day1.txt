@@ -337,6 +337,58 @@ Constructors
 - can be overloaded - multiple constructors defined with differing arguments 
 - can be chained into a constructor list - one ctor calling another ctor 
 
+Object Model - Grady Booch -"OOAD with Applications" 
+- Defines 7 elements which has to be supported by OO systems/languages 
+- Major Elements (4) and Minor Elements (3) 
+Major Elements should be compulsorily supported  by every OO language/system: 
+1. Abstraction 		-> ability to extract information relevant to the problem domain 
+2. Encapsulation 	-> hide the representation (memory) behind implementation (functions) 
+				-> Accessor/Mutator methods, getter/setter methods, Properties 
+				->System data should be accessible via functionalities (interfaces)
+3. Hierarchy/Inheritance-> Ranking or Ordering of types 
+				-> Every OO system should have exactly one root element
+				-> A descendant element should have exactly one ancestor element (Single)
+				-> Single and Multi-level should be supported 
+				-> Multiple, Diamond, Hybrid are not to be supported 
+4. Modularity		-> modular in nature, decomposed into smaller functional units 
+				-> compartmentalization or Componentization should be supported 
+				-> a component should ideally address one specific functionality of the app 
+				
+Minor Elements (3) - optional for OO languages to support these elements 
+1. Concurrency		-> should support concurrent access to the object 
+2. Typing		-> can be strongly typed or weakly typed. Strong typing is preferred
+3. Persistence 		-> preserve the state of the object across time and space (Serialization)
+
+
+Properties 
+- is a special type of method which provides read/write access to the field 
+- used to encapsulate the field 
+- set of Accessor/Mutator methods 
+	Accessor method allows extraction of the data - getter methods 
+	Mutator method allows mutation/changes to the data - setter method 
+private int _id; 
+public int Id
+{
+	private get { return _id; } //read-only access
+	set { _id = value; } //value is contextual reserved word. write-access 
+}
+Compiler converts the declaration into: 
+1. public int get_Id() { return _id; } 
+2. public void set_Id(int value) { _id = value; } 
+
+Emp e1 = new Emp(); 
+e1.Id = 100;  ==> compiler converts it to e1.set_Id(100); 
+int x = e.Id; ==> compiler converts it to e1.get_Id(); 
+
+
+
+
+
+
+
+
+
+
 
 
 
