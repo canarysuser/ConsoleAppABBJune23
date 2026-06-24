@@ -67,6 +67,15 @@ namespace AccountLibrary
         {
             return $"Id:{_info.Id}, Name:{_info.Name}, Type:{_info.Type}, Balance:{_info.Balance}";
         }
+        protected InsufficientFundsException GenerateException(double amount)
+        {
+            InsufficientFundsException ie = new InsufficientFundsException("Insufficient Funds in the account.")
+            {
+                TransactionDate = DateTime.Now,
+                Amount = amount
+            };
+            return ie;
+        }
     }
     public class Savings : Account
     {
@@ -80,7 +89,7 @@ namespace AccountLibrary
                 _info.Balance -= amount;
             else
             {
-                throw new Exception("Insufficient funds.");
+                throw GenerateException(amount);
             }
         }
     }
@@ -98,7 +107,7 @@ namespace AccountLibrary
                 _info.Balance -= amount;
             else
             {
-                throw new Exception("Insufficient funds.");
+                throw GenerateException(amount);
             }
         }
     }

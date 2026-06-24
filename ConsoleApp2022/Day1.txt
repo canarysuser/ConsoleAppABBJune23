@@ -491,9 +491,61 @@ interface IEditor {..... }
 
 
 
+Statics 
+- shared members 
+- shared across all instances of the class 
+- class, methods, properties, fields, constructors can be marked static 
+- use the ClassReference instead of the object reference 
+
+	Console.WriteLine(); //class name reference 
+	e1.Show();  //object reference
+- all instance members can access the shared members 
+- static members cannot access any instance member directly. Needs to use object reference 
+	static void Fn() { //static function 
+		MyClass m = new MyClass(); 
+		m.Fn2();
+	}
+	void Fn2() { //instance function
+		Fn();
+	}
+	
+- static class 
+	- cannot be instantiated, inherited 
+	- can contain only static members 
+- static constructors 
+	- used to initialize static fields 
+	- invoked only once per class load. 
+	- does not support parameters and it cannot be defined with any visibility 
+- static fields, methods, properties 
+	- shared across all instances of the class 
 
 
+Exception 
+- runtime errors 
+- anticipated or unanticipated 
+- anticipated errors can be handled - exception handling 
+- unanticipated errors can lead to program termination. 
 
+	int [] arr = new int[3]; 
+	for(int i=0; i<5; i++) 
+		cw(arr[i]);
+- Handle the anticipated errors using exception filters (catch filters/handlers) 
+- All exceptions in .net derived from System.Exception base class 
+- Custom exceptions should be inheriting from this base class 
+
+- try { ... } finally { ... } 
+- try { ... } catch (CatchFilter ex) { ... } 
+- try { ... } catch (CatchFilter ex) { ... } finally { ... } 
+- try { ... } catch (CatchFilter ex) { ... } catch (CatchFilter ex) { ... } 
+- try { ... } catch (CatchFilter ex) { ... } catch (CatchFilter ex) { ... }  .... finally { ... } 
+
+- try block 
+	- write the statements which could throw errors 
+- catch blocks 
+	- executed when any of the statements in the try block throws an error 
+- finally block 
+	- executed after either the try or catch blocks complete execution
+	- always executed to denote the end of the try..catch sequence 
 
 
 
