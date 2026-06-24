@@ -402,7 +402,10 @@ Polymorphic behavior
 	- visibility, return type, name, argument list cannot change - implementation can 
 	- Overriding, Late-Binding or Runtime Polymorphism
 
-
+Prevent inheritance - use the "sealed" keyword. 
+Sealed keyword on 
+class - prevent inheritance of the class 
+method - prevents further overriding of the method 
 
 
 
