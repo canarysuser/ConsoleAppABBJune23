@@ -436,6 +436,76 @@ Business Rules for Withdraw
 	Current - Minimum balance should be 10000 
 
 
+Application Layers 
+Presentation Layer - One Project 	- UI
+Business Logic Layer - One Project 	- Validation and Verification, Logic
+Data Access Layer - One Project 	- Connect to DB/APIs 
+Business Data Models - One Project 	- Entity Class - Info class 
+Common/Shared Objects - One Project 	- Exception Class, Enums, Extension Methods,
+
+
+Interface: 
+- collection of pure virtual members 
+- pure virtual type 
+- contains only the signatures of methods, properties and events 
+- does not contain any implementation 
+- does not contain fields, constructors, destructors 
+- a class can implement multiple interfaces 
+- use interfaces when 
+	- we want to restrict access to the system 
+	- we want to encapsulate the system behind functions 
+	- we want a common set of functions across multiple classes 
+- a class will have to provide implementation for all the interface members 
+- if the class does not provide implementation, the class must be marked abstract and 
+	must provide abstract methods for each interface member. 
+
+- interfaces can inherit from another interface 
+- "interface" keyword is used to declare interfaces 
+- in .NET, interface names begin with "I" for ex: IAccount, IEmployee, IDisposable, IList 
+- all interface members are implicitly public, visibility cannot be changed.
+
+
+
+
+
+
+UserAccessPermissions 
+	UserId
+	AppId 
+	CanEditEmp 	bit	Y
+	CanEditCust	bit	N
+	CanCreateEmp	bit	Y
+	CanCreateCust	bit	Y
+	CanListEmp	bit	Y
+	CanListCust	bit	Y
+
+
+PermissionSets 
+	Owner ------ 
+	Contributor 
+	Editor 
+	Viewer 
+
+interface IViewer { .... } 
+interface IEditor {..... } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
