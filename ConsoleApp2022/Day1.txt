@@ -381,8 +381,26 @@ e1.Id = 100;  ==> compiler converts it to e1.set_Id(100);
 int x = e.Id; ==> compiler converts it to e1.get_Id(); 
 
 
+Hierarchy/Inheritance 
+- Any class in .NET is inheritable by default, 
+- Re-use the code/share the code 
+- All non-private members of the base class are accessible to the derived classes
+- By default, the parameterless ctor of the base class is always invoked before the derived ctor runs
+- Before creating the derived object, the base object is created first. 
+- Derived class has an implicit pointer to the base object called "base" 
 
-
+Polymorphic behavior 
+- Same name multiple forms 
+- Static Polymorphism 
+	- overloading, compile time polymorphism, early binding 
+	- the actual method to be invoked is known at compile time 
+	- the number, order or type of parameters must differ 
+	- the visibility and the return type of the method are not considered 
+- Dynamic Polymorphism
+	- the actual method to be invoked is known at runtime using virtual tables [VTABLES]
+	- the method signature cannot be changed by the derived class 
+	- visibility, return type, name, argument list cannot change - implementation can 
+	- Overriding, Late-Binding or Runtime Polymorphism
 
 
 

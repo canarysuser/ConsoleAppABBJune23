@@ -88,13 +88,25 @@ namespace ConsoleApp2022
 
             //Arrays.Test();
             //Methods.Test();
-            Employee e1 = new Employee();
-            e1.Show();
-            e1.Id = 9999;
-            e1.Name = "Microsoft";
-            e1.City = "Chennai";
-            e1.Salary = 9876.54;
-            e1.Show();
+            //Employee e1 = new Employee();
+            //e1.Show();
+            //e1.Id = 9999;
+            //e1.Name = "Microsoft";
+            //e1.City = "Chennai";
+            //e1.Salary = 9876.54;
+            //e1.Show();
+            ////Object Initializers 
+            //Employee e2 = new Employee
+            //{
+            //    Id = 1234,
+            //    Name = "John Doe",
+            //    City = "Hyderabad",
+            //    Salary = 12345.67,
+            //    Address = "Awaiting details"
+            //};
+            //e2.Show();
+
+            Inheritance.Test();
         }
     }
 }
